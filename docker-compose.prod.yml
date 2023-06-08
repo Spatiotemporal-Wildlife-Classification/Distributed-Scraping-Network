@@ -17,8 +17,6 @@ services:
       - "traefik.http.routers.fastapi.rule=Host(`dsn.travisdawson.com`)"
       - "traefik.http.routers.fastapi.tls=true"
       - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
-      - "traefik.http.middlewares.cors.headers.accessControlAllowOriginList=*" # Allow all origins or specify specific origins
-      - "traefik.http.middlewares=cors@file"
 
 
 
@@ -30,4 +28,3 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "$PWD/app/traefik/traefik.prod.toml:/etc/traefik/traefik.toml"
-      - "$PWD/app/traefik/middleware.yml:/etc/traefik/middleware.yml:ro"

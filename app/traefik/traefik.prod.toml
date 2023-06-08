@@ -22,10 +22,4 @@
   [certificatesResolvers.letsencrypt.acme.httpChallenge]
     entryPoint = "web"
 
-[http.middlewares]
-  [http.middlewares.cors]
-    [http.middlewares.cors.headers]
-      accessControlAllowOriginList = ["*"]
-      accessControlAllowHeaders = ["*"]
-      accessControlAllowMethods = ["*"]
 

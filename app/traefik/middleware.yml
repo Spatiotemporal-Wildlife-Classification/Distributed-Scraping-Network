@@ -1,8 +1,0 @@
-http:
-  middlewares:
-    cors:
-      headers:
-        accessControlAllowOriginList: ["*"]
-        accessControlAllowHeaders: ["*"]
-        accessControlAllowMethods: ["*"]
-
