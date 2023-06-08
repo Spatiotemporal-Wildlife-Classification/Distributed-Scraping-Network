@@ -1,0 +1,28 @@
+version: "3.1"
+services:
+  app:
+    build: ./app           # Where the Dockerfile is stored
+    restart: always
+
+    volumes:
+      - ./app:/app
+
+    command: gunicorn main:app --bind 0.0.0.0:5000 -w 4 -k uvicorn.workers.UvicornWorker
+
+    expose:
+      - 5000
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fastapi.rule=Host(`fastapi.localhost`)"
+      - - "traefik.http.routers.fastapi.tls=true"
+      - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
+
+  traefik:
+    image: traefik:v2.2
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "$PWD/app/traefik/traefik.prod.toml:/etc/traefik/traefik.toml"
