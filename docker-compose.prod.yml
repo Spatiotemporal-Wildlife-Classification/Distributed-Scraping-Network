@@ -17,16 +17,20 @@ services:
       - "traefik.http.routers.fastapi.rule=Host(`dsn.travisdawson.com`)"
       - "traefik.http.routers.fastapi.tls=true"
       - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
-      - "traefik.http.middlewares.cors.headers.accesscontrolalloworigin=https://spatiotemporal-wildlife-classification.github.io"
-      - "traefik.http.middlewares.cors.headers.accesscontrolallowmethods=*"
-      - "traefik.http.middlewares.cors.headers.accesscontrolmaxage=86400"
-      - "traefik.http.middlewares.cors.headers.accesscontrolallowheaders=*"
+
 
   traefik:
-    image: traefik:v2.2
+    image: traefik:latest
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "$PWD/app/traefik/traefik.prod.toml:/etc/traefik/traefik.toml"
+      - "$PWD/traefik/middleware.yml:/etc/traefik/middleware.yml"
+    networks:
+    - traefik
+
+networks:
+  traefik:
+    external: true

@@ -21,3 +21,9 @@
   storage= "acme.json"
   [certificatesResolvers.letsencrypt.acme.httpChallenge]
     entryPoint = "web"
+
+[http.middlewares]
+  [http.middlewares.default-cors]
+    [http.middlewares.default-cors.headers]
+      accessControlAllowHeaders = "Content-Type, Authorization"
+
