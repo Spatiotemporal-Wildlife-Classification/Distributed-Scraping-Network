@@ -28,9 +28,3 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "$PWD/app/traefik/traefik.prod.toml:/etc/traefik/traefik.toml"
       - "$PWD/traefik/middleware.yml:/etc/traefik/middleware.yml"
-    networks:
-    - traefik
-
-networks:
-  traefik:
-    external: true
