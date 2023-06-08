@@ -1,5 +1,6 @@
 from fastapi import FastAPI, status, HTTPException
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 
 class CompletedJob(BaseModel):
@@ -86,6 +87,13 @@ def format_job_info(response: str) -> JobInfo:
 vars = {}
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust this based on your requirements
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.on_event("startup")
