@@ -14,7 +14,7 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.fastapi.rule=Host(`109.74.200.171`)"
+      - "traefik.http.routers.fastapi.rule=Host(`https://spatiotemporal-wildlife-classification.github.io/Distributed-Scraping-Network/api/`)"
       - "traefik.http.routers.fastapi.tls=true"
       - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
 
