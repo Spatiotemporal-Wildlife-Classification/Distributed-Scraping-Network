@@ -88,7 +88,7 @@ vars = {}
 
 app = FastAPI()
 origins = ['http://172.18.0.2:5000/,'
-           'https://spatiotemporal-wildlife-classification.github.io']
+           'https://spatiotemporal-wildlife-classification.github.io/api']
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
