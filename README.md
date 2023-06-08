@@ -31,7 +31,7 @@ The API was created using [FastAPI](https://fastapi.tiangolo.com/)
     - Open a terminal and copy the Linode's SSH key, enter this as a command
     - Enter the password corresponding to the linode
     - You are now in the terminal of the cloud computer service.
-    - run `sudo apt-get update` followed by `sudo apt upgrade` to update the system.
+    - run `apt-get update` followed by `apt upgrade` to update the system.
     - Run `apt install docker-compose` to install docker
 4. Clone a fork of this repository into the terminal using the `git clone` command
 5. Rebuild the docker container with the following command: `docker-compose build`
@@ -39,5 +39,5 @@ The API was created using [FastAPI](https://fastapi.tiangolo.com/)
    - As the server has been run detached, you can exit the SSH terminal and it will continue running.
 7. The resulting endpoint will be as follows: http:// `IP on linode` :5000/
     - Example: http://109.74.200.171:5000/
-8. To review the API specifications place `docs` after the URL to access the API swagger
+8. To review the API specifications place `docs` after the URL to access the API swagger to see the API specifications
    - http://109.74.200.171:5000/docs
