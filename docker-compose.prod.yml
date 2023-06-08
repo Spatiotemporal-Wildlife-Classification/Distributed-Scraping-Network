@@ -17,7 +17,7 @@ services:
       - "traefik.http.routers.fastapi.rule=Host(`dsn.travisdawson.com`)"
       - "traefik.http.routers.fastapi.tls=true"
       - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
-      - "traefik.http.middlewares.cors.headers.accessControlAllowOriginList=https://spatiotemporal-wildlife-classification.github.io" # Allow all origins or specify specific origins
+      - "traefik.http.middlewares.cors.headers.accessControlAllowOriginList=[https://spatiotemporal-wildlife-classification.github.io]" # Allow all origins or specify specific origins
       - "traefik.http.middlewares=cors@file"
 
 
