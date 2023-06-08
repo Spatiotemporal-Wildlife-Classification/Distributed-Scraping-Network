@@ -17,6 +17,10 @@ services:
       - "traefik.http.routers.fastapi.rule=Host(`dsn.travisdawson.com`)"
       - "traefik.http.routers.fastapi.tls=true"
       - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
+      - "traefik.http.middlewares.cors.headers.accesscontrolalloworigin=*"
+      - "traefik.http.middlewares.cors.headers.accesscontrolallowmethods=*"
+      - "traefik.http.middlewares.cors.headers.accesscontrolmaxage=86400"
+      - "traefik.http.middlewares.cors.headers.accesscontrolallowheaders=*"
 
   traefik:
     image: traefik:v2.2
