@@ -25,7 +25,7 @@
 [http.middlewares]
   [http.middlewares.cors]
     [http.middlewares.cors.headers]
-      accessControlAllowOriginList = ["https://spatiotemporal-wildlife-classification.github.io"]
+      accessControlAllowOriginList = ["*"]
       accessControlAllowHeaders = ["*"]
       accessControlAllowMethods = ["*"]
 
