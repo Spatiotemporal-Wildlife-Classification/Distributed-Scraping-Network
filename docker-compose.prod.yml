@@ -30,4 +30,4 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "$PWD/app/traefik/traefik.prod.toml:/etc/traefik/traefik.toml"
-      - "$PWD/traefik/middleware.yml:/etc/traefik/middleware.yml:ro"
+      - "$PWD/app/traefik/middleware.yml:/etc/traefik/middleware.yml:ro"
