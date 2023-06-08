@@ -23,7 +23,9 @@
     entryPoint = "web"
 
 [http.middlewares]
-  [http.middlewares.default-cors]
-    [http.middlewares.default-cors.headers]
-      accessControlAllowHeaders = "Content-Type, Authorization"
+  [http.middlewares.cors]
+    [http.middlewares.cors.headers]
+      accessControlAllowOriginList = ["https://spatiotemporal-wildlife-classification.github.io"]
+      accessControlAllowHeaders = ["*"]
+      accessControlAllowMethods = ["*"]
 

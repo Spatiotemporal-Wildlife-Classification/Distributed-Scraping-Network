@@ -2,4 +2,7 @@ http:
   middlewares:
     cors:
       headers:
-        accessControlAllowHeaders: "Content-Type, Authorization"
+        accessControlAllowOriginList: ["https://spatiotemporal-wildlife-classification.github.io"]
+        accessControlAllowHeaders: ["*"]
+        accessControlAllowMethods: ["*"]
+
