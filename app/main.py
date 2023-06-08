@@ -87,7 +87,13 @@ def format_job_info(response: str) -> JobInfo:
 vars = {}
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://spatiotemporal-wildlife-classification.github.io"],  # Adjust this based on your requirements
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 @app.on_event("startup")
 async def startup_event():
     vars["index"] = 0
