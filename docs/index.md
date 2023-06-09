@@ -7,7 +7,7 @@ node at any computer. This allows collection to occur externally running from a 
 This allows you to keep your computer free to work on other topics while data collection occurs. 
 
 This API is run in combination with results obtained from [Spatiotemporal Wildlife Classification](https://trav-d13.github.io/spatiotemporal_wildlife_classification/)
-and [DSN Leaf](). The links provided will take you directly to their respective documentation. 
+and [DSN Leaf](https://spatiotemporal-wildlife-classification.github.io/DSN-Leaf/). The links provided will take you directly to their respective documentation. 
 
 <img height="341" src="resources/dsn.png" width="281" alt="taxonomic structure" style="display: block; margin: 0 auto"/>
 
