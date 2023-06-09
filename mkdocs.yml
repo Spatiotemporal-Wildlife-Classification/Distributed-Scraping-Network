@@ -10,4 +10,5 @@ plugins:
 
 nav:
   - Home: index.md
+  - How to use: use.md
   - API Documentation: api.md
