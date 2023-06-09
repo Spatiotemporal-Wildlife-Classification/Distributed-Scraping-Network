@@ -2,7 +2,7 @@
 
 This API is created to run on a server, providing a central means of distributing and collecting 
 weather data from [Open-Meteo](https://open-meteo.com/). 
-This server provides a means of accessing and running a [DNS leaf](https://github.com/Spatiotemporal-Wildlife-Classification/DSN-Leaf)
+This server provides a means of accessing and running a [DSN leaf](https://github.com/Spatiotemporal-Wildlife-Classification/DSN-Leaf)
 node at any computer. This allows collection to occur externally running from a form of cloud computing. 
 This allows you to keep your computer free to work on other topics while data collection occurs. 
 
