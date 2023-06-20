@@ -9,6 +9,7 @@ plugins:
         default_handler: python
 
 nav:
+  - Organization Home: https://spatiotemporal-wildlife-classification.github.io/
   - Home: index.md
   - How to use: use.md
   - API Documentation: api.md
