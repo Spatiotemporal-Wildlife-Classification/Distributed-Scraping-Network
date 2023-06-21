@@ -41,3 +41,5 @@ The API was created using [FastAPI](https://fastapi.tiangolo.com/)
     - Example: http://109.74.200.171:5000/
 8. To review the API specifications place `docs` after the URL to access the API swagger to see the API specifications
    - http://109.74.200.171:5000/docs
+
+Many thanks to the original repository at https://github.com/S010MON/distributed-scraping-network from which this repository was developed.
